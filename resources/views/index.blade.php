@@ -13,8 +13,23 @@
 </head>
 
 <body>
-    <div class="navigation-history">
-        {{-- change this into a component --}}
+    {{-- breadcrumb nav --}}
+    <div class="breadcrumb">
+        <x-breadcrumb>Home</x-breadcrumb>
+        &#8250;
+        <x-breadcrumb>Women</x-breadcrumb>
+        &#8250;
+        <x-breadcrumb>Dresse</x-breadcrumb>
+    </div>
+    {{-- product container --}}
+    <div class="product-container">
+        {{-- Left part of the product container with pictures and socials --}}
+        <div></div>
+        {{-- Right part of the container with details --}}
+        <div></div>
+    </div>
+
+    {{-- <div class="navigation-history">
         <a href="#">Home</a> &#8250;
         <a href="#">Women</a> &#8250;
         <a href="#">Dresse</a>
@@ -33,7 +48,7 @@
             <p class="socials">Share :</p>
         </div>
         <div class="product-info">Desc</div>
-    </div>
+    </div> --}}
 
 </body>
 
