@@ -7,15 +7,15 @@
 
 body {
     height: 100vh;
+    background: rgb(66, 77, 47);
 }
-
-.navigation-history {
+.breadcrumb {
     font-weight: thin;
     text-decoration: none;
     color: #909090;
-    padding-top: 94px;
 }
 
+/*
 .navigation-history a {
     line-height: 15.23px;
     font-size: 13px;
@@ -72,4 +72,4 @@ body {
 }
 
 .socials {
-}
+} */
