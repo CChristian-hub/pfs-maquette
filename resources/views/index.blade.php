@@ -9,6 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/befe272f62.js" crossorigin="anonymous"></script>
     <title>Product Page</title>
 </head>
 
@@ -35,15 +36,27 @@
                     <li><x-picture size="small" pictureID="04.jpeg" alt="small-picture"></x-picture></li>
                 </ul>
                 <div class="big-picture">
-                    <x-picture size="big" pictureID="04.jpeg" alt="big-picture"></x-picture>
+                    <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
                 </div>
             </div>
-            <p>Share: img img ...</p>
+            <p class="pictures-footer">
+                Share :
+                <span class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </span>
+                <span class="social-icon">
+                    <i class="fab fa-pinterest-p"></i>
+                </span>
+                <span style="cursor:pointer">...</span>
+            </p>
         </div>
 
 
         {{-- Right part of the container with details --}}
-        <div></div>
+        <div class="description-container">
+
+
+        </div>
     </div>
 
     {{--
