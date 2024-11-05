@@ -8,6 +8,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/befe272f62.js" crossorigin="anonymous"></script>
     <title>Product Page</title>
@@ -66,47 +68,25 @@
                 </p>
                 <div class="product-rating">
                     <div>
-                        <i class="fas fa-star rating-icon-colored"></i>
-                        <i class="fas fa-star rating-icon-colored"></i>
-                        <i class="fas fa-star rating-icon-colored"></i>
-                        <i class="fas fa-star rating-icon-colored"></i>
-                        <i class="fas fa-star rating-icon-gray"></i>
+                        <x-rating_stars rate="4"></x-rating_stars>
                     </div>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Reviews (2)</p>
                 </div>
             </div>
             {{-- Starting price --}}
-            <div class="price-container">
+            <div class="price-information">
                 <p class="">Starting at</p>
-                <p class="price-display">15,99€</p>
+                <x-price_tag>15,99€</x-price_tag>
             </div>
 
             {{-- Buy options --}}
-            <div>
-                <p>Buy by :&nbsp;</p>
-                <span><input type="radio" name="Pack" id="pack" class="button-test"> Pack</span>
-                <span><input type="radio" name="Pack" id="pack"> Unit</span>
+            <div class="unit-pack-selector">
+                <p>Buy by&nbsp;&nbsp;:&nbsp;</p>
+                <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
+                <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
             </div>
         </div>
     </div>
-
-    {{--
-    <div class="product-container">
-        <div class="product-picture">
-            <ul class="product-preview">
-                <li><img src="/images/picture-preview-01.jpeg" alt="mini-preview" class="image-small"></li>
-                <li><img src="/images/picture-preview-02.jpeg" alt="mini-preview" class="image-small"></li>
-                <li><img src="/images/picture-preview-01.jpeg" alt="mini-preview" class="image-small"></li>
-                <li><img src="/images/picture-preview-02.jpeg" alt="mini-preview" class="image-small"></li>
-                <li><img src="/images/picture-preview-03.jpeg" alt="mini-preview" class="image-small"></li>
-                <li><img src="/images/picture-preview-04.jpeg" alt="mini-preview" class="image-small"></li>
-            </ul>
-            <img class="image-big" src="./images/picture-preview-03.jpeg" alt="main-disp">
-            <p class="socials">Share :</p>
-        </div>
-        <div class="product-info">Desc</div>
-    </div> --}}
-
 </body>
 
 </html>

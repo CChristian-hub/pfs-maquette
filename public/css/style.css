@@ -105,6 +105,7 @@ body {
     margin-left: 30px;
 }
 
+/* brand */
 .product-brand {
     display: flex;
     flex-direction: column;
@@ -121,6 +122,8 @@ body {
     font-size: 14px;
     line-height: 16px;
 }
+
+/* details */
 
 .product-details {
     padding-top: 19px;
@@ -140,6 +143,7 @@ body {
     color: #fd5c22;
 }
 
+/* ratings */
 .product-rating {
     display: flex;
     flex-direction: row;
@@ -171,13 +175,15 @@ body {
     width: 16px;
 }
 
-.price-container {
+/* price information */
+
+.price-information {
     margin-top: 12px;
     display: flex;
     flex-direction: column;
 }
 
-.price-container p {
+.price-information p {
     font-family: "Roboto", sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -187,61 +193,64 @@ body {
     width: auto;
 }
 
-.price-container .price-display {
+.price-information .price-display {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
     font-size: 24px;
     line-height: 29.26px;
     color: #fd5c22;
 }
-/*
 
-.product-container {
-    display: grid;
-    grid-template-areas: "picture description";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    height: 100vh;
-    background: orange;
+/* unit selector */
+
+.unit-pack-selector {
+    flex-direction: row;
+
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 18px;
 }
 
-.product-picture {
+.unit-pack-selector p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19.5px;
+}
+
+.checkbox-selector {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 16px;
+    padding-right: 12px;
+}
+
+.checkbox-selector label {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19.5px;
+}
+
+.unit-pack-selector input {
+    accent-color: #1f1f1f;
+    appearance: none;
+    height: 18px;
+    width: 18px;
+    border: 1px solid black; /* default border color */
+}
+
+.unit-pack-selector input:checked {
+    background-color: #1f1f1f;
+}
+
+.unit-pack-selector input:checked::before {
+    content: "✓";
+    color: white;
+    position: relative;
     display: flex;
-    grid-area: picture;
-    justify-items: center;
-    justify-content: end;
-    gap: 8px;
-    background: green;
+    justify-content: center;
+    align-items: center;
 }
-
-.product-preview {
-    display: grid;
-    grid-template-areas: "smallp", "smallp", "smallp", "smallp", "smallp",
-        "smallp";
-    align-content: space-between;
-    height: 692px;
-    width: 75px;
-    list-style: none;
-    padding-top: 1px;
-}
-
-.product-info {
-    grid-area: description;
-    background-color: blue;
-}
-
-.image-small {
-    grid-area: smallp;
-    max-width: 74px;
-    max-height: 107px;
-}
-
-.image-big {
-    display: block;
-    max-width: 469.83px;
-    max-height: 693px;
-    align-content: end;
-}
-
-.socials {
-} */
