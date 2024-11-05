@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    {{-- breadcrumb nav --}}
+    {{-- breadcrumb nav, to move it should be in the lower container and not isolated --}}
     <div class="breadcrumb">
         <x-breadcrumb>Home</x-breadcrumb>
         &#8250;
@@ -66,19 +66,19 @@
                 </p>
                 <div class="product-rating">
                     <div>
-                        <i class="fas fa-star rating-icon"></i>
-                        <i class="fas fa-star rating-icon"></i>
-                        <i class="fas fa-star rating-icon"></i>
-                        <i class="fas fa-star rating-icon"></i>
-                        <i class="fas fa-star rating-icon"></i>
+                        <i class="fas fa-star rating-icon-colored"></i>
+                        <i class="fas fa-star rating-icon-colored"></i>
+                        <i class="fas fa-star rating-icon-colored"></i>
+                        <i class="fas fa-star rating-icon-colored"></i>
+                        <i class="fas fa-star rating-icon-gray"></i>
                     </div>
                     <p>&nbsp;&nbsp;&nbsp;&nbsp;Reviews (2)</p>
                 </div>
             </div>
             {{-- Starting price --}}
-            <div>
-                <p>Starting at</p>
-                <p>15,99€</p>
+            <div class="price-container">
+                <p class="">Starting at</p>
+                <p class="price-display">15,99€</p>
             </div>
 
             {{-- Buy options --}}
