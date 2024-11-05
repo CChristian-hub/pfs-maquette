@@ -24,16 +24,29 @@
     {{-- product container --}}
     <div class="product-container">
         {{-- Left part of the product container with pictures and socials --}}
-        <div></div>
+        <div class="picture-container">
+            <div class="pictures">
+                <ul class="small-pictures-container">
+                    <li><x-picture size="small" pictureID="01.jpeg" alt="small-picture"></x-picture></li>
+                    <li><x-picture size="small" pictureID="02.jpeg" alt="small-picture"></x-picture></li>
+                    <li><x-picture size="small" pictureID="01.jpeg" alt="small-picture"></x-picture></li>
+                    <li><x-picture size="small" pictureID="02.jpeg" alt="small-picture"></x-picture></li>
+                    <li><x-picture size="small" pictureID="03.jpeg" alt="small-picture"></x-picture></li>
+                    <li><x-picture size="small" pictureID="04.jpeg" alt="small-picture"></x-picture></li>
+                </ul>
+                <div class="big-picture">
+                    <x-picture size="big" pictureID="04.jpeg" alt="big-picture"></x-picture>
+                </div>
+            </div>
+            <p>Share: img img ...</p>
+        </div>
+
+
         {{-- Right part of the container with details --}}
         <div></div>
     </div>
 
-    {{-- <div class="navigation-history">
-        <a href="#">Home</a> &#8250;
-        <a href="#">Women</a> &#8250;
-        <a href="#">Dresse</a>
-    </div>
+    {{--
     <div class="product-container">
         <div class="product-picture">
             <ul class="product-preview">
