@@ -53,9 +53,40 @@
 
 
         {{-- Right part of the container with details --}}
-        <div class="description-container">
+        <div class="details-container">
+            {{-- brand name and minimum price --}}
+            <div class="product-brand">
+                <h2>Luizacco & Co</h2>
+                <p>Minimum 100€</p>
+            </div>
+            {{-- details of the product and its reviews --}}
+            <div class="product-details">
+                <p>Combishort smockée à la taille en broderie anglaise avec nœud au dos&nbsp;
+                    <span><i class="far fa-heart"></i></span>
+                </p>
+                <div class="product-rating">
+                    <div>
+                        <i class="fas fa-star rating-icon"></i>
+                        <i class="fas fa-star rating-icon"></i>
+                        <i class="fas fa-star rating-icon"></i>
+                        <i class="fas fa-star rating-icon"></i>
+                        <i class="fas fa-star rating-icon"></i>
+                    </div>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Reviews (2)</p>
+                </div>
+            </div>
+            {{-- Starting price --}}
+            <div>
+                <p>Starting at</p>
+                <p>15,99€</p>
+            </div>
 
-
+            {{-- Buy options --}}
+            <div>
+                <p>Buy by :&nbsp;</p>
+                <span><input type="radio" name="Pack" id="pack" class="button-test"> Pack</span>
+                <span><input type="radio" name="Pack" id="pack"> Unit</span>
+            </div>
         </div>
     </div>
 
