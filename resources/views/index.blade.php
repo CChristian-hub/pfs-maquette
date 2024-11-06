@@ -65,113 +65,19 @@
                     <table>
                         <thead>
                             <tr>
-                                <th>
-                                    Color
-                                </th>
-                                <th>
-                                    S
-                                </th>
-                                <th>
-                                    M
-                                </th>
-                                <th>
-                                    L
-                                </th>
-                                <th>
-                                    Price
-                                </th>
-                                <th>
-                                    Total HT
-                                </th>
+                                @php
+                                    $headers = ['Color', 'S', 'M', 'L', 'Price', 'Total HT'];
+                                    foreach ($headers as $head) {
+                                        echo '<th>' . $head . '</th>';
+                                    }
+                                @endphp
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>
-                                    <div class="product-color">
-                                        <span class="color-circle" style="background:#24734C"></span>
-                                        <span class="color-name" style="font-size: 10px">Green</span>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="quantity-container">
-                                        <span class="quantity-size">3</span>
-                                        <div style="display: flex; gap:7px">
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="quantity-container">
-                                        <span class="quantity-size">4</span>
-                                        <div style="display: flex; gap:7px">
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="quantity-container">
-                                        <span class="quantity-size">1</span>
-                                        <div style="display: flex; gap:7px">
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>13,50€</td>
-                                <td>108€</td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div class="product-color">
-                                        <span class="color-circle" style="background:#FD2222"></span>
-                                        <span class="color-name"style="font-size: 10px">Red</span>
-                                    </div>
-                                </td>
-                                <td style="padding: 18px 0px">
-                                    <div class="quantity-container">
-                                        <span class="quantity-size">2</span>
-                                        <div style="display: flex; gap:7px">
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="quantity-container">
-                                        <span class="quantity-size">4</span>
-                                        <div style="display: flex; gap:7px">
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>
-                                    <div class="quantity-container">
-                                        <span class="quantity-size">0</span>
-                                        <div style="display: flex; gap:7px">
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
-                                            <span class="quantity-button"
-                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
-                                        </div>
-                                    </div>
-                                </td>
-                                <td>13,50€</td>
-                                <td>81,00€</td>
-                            </tr>
+                            <x-product-table-quantity color="Green" hexColor="#24734C" quantityS="3" quantityM="4"
+                                quantityL="1" price="13,50"></x-product-table-quantity>
+                            <x-product-table-quantity color="Red" hexColor="#FD2222" quantityS="2" quantityM="4"
+                                quantityL="0" price="13,5"></x-product-table-quantity>
                         </tbody>
                     </table>
                 </div>
@@ -181,14 +87,27 @@
                 </a>
                 {{-- Shipment information --}}
                 <div class="shipment-container">
-                    <div class="expected_shipment"><img src="./images/shipment.svg" alt="shipment">Shipment expected
-                        between 4 juillet - 9 juillet</div>
-                    <div class="secured_payment"><img src="./images/safepayment.svg" alt="payment">Paiement sécurisé
+                    <div class="expected_shipment">
+                        <img src="./images/shipment.svg" alt="shipment">
+                        <p style="padding-left: 24px">Shipment expected between 4 juillet - 9 juillet</p>
                     </div>
-                    <div class="return_policy"><img src="./images/return.svg" alt="return">Retour accepté sous 7
-                        jours</div>
-                    <div class="client_support"><img src="./images/clientsupport.svg" alt="client-support">Service
-                        client personnalisé</div>
+                    <x-shipment_policy class="secured_payment" pathsvg="safepayment" alt="payment">Paiement
+                        sécurisé</x-shipment_policy>
+                    <x-shipment_policy class="return_policy" pathsvg="return" alt="return">Retour accepté sous
+                        7 jours</x-shipment_policy>
+                    <x-shipment_policy class="client_support" pathsvg="clientsupport" alt="support">Service client
+                        personnalisé</x-shipment_policy>
+                </div>
+                {{--  --}}
+                <div class="product-description-container">
+                    <p><img src="./images/planet.svg" alt="planet">Translated by google - <span>See in original
+                            language</span></p>
+                    <div class="description-block">
+                        <p>Description</p>
+                        <p>Outer : <span>Leather 95%, Polyamide 5%</span></p>
+                        <p>Lining : <span>Polyester 100%</span></p>
+                        <p>Sole : <span>Rubber 100%</span></p>
+                    </div>
                 </div>
             </div>
         </div>
