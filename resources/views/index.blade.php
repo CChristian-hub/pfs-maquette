@@ -17,52 +17,66 @@
 
 <body>
     {{-- breadcrumb nav, to move it should be in the lower container and not isolated --}}
-    <div class="breadcrumb">
-        <x-breadcrumb>Home</x-breadcrumb>
-        &#8250;
-        <x-breadcrumb>Women</x-breadcrumb>
-        &#8250;
-        <x-breadcrumb>Dresse</x-breadcrumb>
-    </div>
-    {{-- product container --}}
-    <div class="product-container">
-        {{-- Left part of the product container with pictures and socials --}}
-        <div class="picture-container">
-            <div class="pictures">
-                <x-product_small_pictures></x-product_small_pictures>
-                <div class="big-picture">
-                    <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
+    <div class="main">
+        <div class="breadcrumb">
+            <x-breadcrumb>Home</x-breadcrumb>
+            &#8250;
+            <x-breadcrumb>Women</x-breadcrumb>
+            &#8250;
+            <x-breadcrumb>Dresse</x-breadcrumb>
+        </div>
+        {{-- product container --}}
+        <div class="product-container">
+            {{-- Left part of the product container with pictures and socials --}}
+            <div class="picture-container">
+                <div class="pictures">
+                    <x-product_small_pictures></x-product_small_pictures>
+                    <div class="big-picture">
+                        <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
+                    </div>
+                </div>
+                <p class="socials">
+                    <x-socials></x-socials>
+                </p>
+            </div>
+
+
+            {{-- Right part of the container with details --}}
+            <div class="details-container">
+                {{-- brand name and minimum price --}}
+                <div class="product-brand">
+                    <h2>Luizacco & Co</h2>
+                    <p>Minimum 100€</p>
+                </div>
+                {{-- details of the product and its reviews --}}
+                <div class="product-details">
+                    <x-product_information :isFavorite=false rate="4"></x-product_information>
+                </div>
+                {{-- Starting price --}}
+                <div class="price-information">
+                    <x-price_information>15,99€</x-price_information>
+                </div>
+                {{-- Buy options --}}
+                <div class="unit-pack-selector">
+                    <p>Buy by&nbsp;&nbsp;&nbsp;</p>
+                    <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
+                    <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
                 </div>
             </div>
-            <p class="socials">
-                <x-socials></x-socials>
-            </p>
-        </div>
-
-
-        {{-- Right part of the container with details --}}
-        <div class="details-container">
-            {{-- brand name and minimum price --}}
-            <div class="product-brand">
-                <h2>Luizacco & Co</h2>
-                <p>Minimum 100€</p>
-            </div>
-            {{-- details of the product and its reviews --}}
-            <div class="product-details">
-                <x-product_information :isFavorite=false rate="4"></x-product_information>
-            </div>
-            {{-- Starting price --}}
-            <div class="price-information">
-                <x-price_information>15,99€</x-price_information>
-            </div>
-            {{-- Buy options --}}
-            <div class="unit-pack-selector">
-                <p>Buy by&nbsp;&nbsp;:&nbsp;</p>
-                <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
-                <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
-            </div>
         </div>
     </div>
+    {{-- Separator --}}
+    {{-- maybe replace this with a div or change its style --}}
+    <hr>
+    {{-- User's reviews --}}
+    <div class="review-container">
+        <h2>Luizacco & Co &nbsp;Customer Reviews</h2>
+        {{-- make a grid for this part --}}
+        <div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
