@@ -39,8 +39,6 @@
                     <x-socials></x-socials>
                 </p>
             </div>
-
-
             {{-- Right part of the container with details --}}
             <div class="details-container">
                 {{-- brand name and minimum price --}}
@@ -178,11 +176,21 @@
                     </table>
                 </div>
                 {{-- Add to cart --}}
-                <div class="cart-button">
-                    <p>Add to Cart</p><span>logo</span>
+                <a href="#" class="cart-button">
+                    <p>Add to Cart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><img src="./images/cart.svg" alt="cart-svg">
+                </a>
+                {{-- Shipment information --}}
+                <div class="shipment-container">
+                    <div class="expected_shipment"><img src="./images/shipment.svg" alt="shipment">Shipment expected
+                        between 4 juillet - 9 juillet</div>
+                    <div class="secured_payment"><img src="./images/safepayment.svg" alt="payment">Paiement sécurisé
+                    </div>
+                    <div class="return_policy"><img src="./images/return.svg" alt="return">Retour accepté sous 7
+                        jours</div>
+                    <div class="client_support"><img src="./images/clientsupport.svg" alt="client-support">Service
+                        client personnalisé</div>
                 </div>
             </div>
-
         </div>
     </div>
     {{-- Separator --}}
