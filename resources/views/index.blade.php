@@ -17,52 +17,194 @@
 
 <body>
     {{-- breadcrumb nav, to move it should be in the lower container and not isolated --}}
-    <div class="breadcrumb">
-        <x-breadcrumb>Home</x-breadcrumb>
-        &#8250;
-        <x-breadcrumb>Women</x-breadcrumb>
-        &#8250;
-        <x-breadcrumb>Dresse</x-breadcrumb>
-    </div>
-    {{-- product container --}}
-    <div class="product-container">
-        {{-- Left part of the product container with pictures and socials --}}
-        <div class="picture-container">
-            <div class="pictures">
-                <x-product_small_pictures></x-product_small_pictures>
-                <div class="big-picture">
-                    <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
+    <div class="main">
+        <div class="breadcrumb">
+            <x-breadcrumb>Home</x-breadcrumb>
+            &#8250;
+            <x-breadcrumb>Women</x-breadcrumb>
+            &#8250;
+            <x-breadcrumb>Dresse</x-breadcrumb>
+        </div>
+        {{-- product container --}}
+        <div class="product-container">
+            {{-- Left part of the product container with pictures and socials --}}
+            <div class="picture-container">
+                <div class="pictures">
+                    <x-product_small_pictures></x-product_small_pictures>
+                    <div class="big-picture">
+                        <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
+                    </div>
+                </div>
+                <p class="socials">
+                    <x-socials></x-socials>
+                </p>
+            </div>
+            {{-- Right part of the container with details --}}
+            <div class="details-container">
+                {{-- brand name and minimum price --}}
+                <div class="product-brand">
+                    <h2>Luizacco & Co</h2>
+                    <p>Minimum 100€</p>
+                </div>
+                {{-- details of the product and its reviews --}}
+                <div class="product-details">
+                    <x-product_information :isFavorite=false rate="4"></x-product_information>
+                </div>
+                {{-- Starting price --}}
+                <div class="price-information">
+                    <x-price_information>15,99€</x-price_information>
+                </div>
+                {{-- Buy options --}}
+                <div class="unit-pack-selector">
+                    <p>Buy by&nbsp;&nbsp;&nbsp;</p>
+                    <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
+                    <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
+                </div>
+                {{-- Sizes table --}}
+                <div class="product-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Color
+                                </th>
+                                <th>
+                                    S
+                                </th>
+                                <th>
+                                    M
+                                </th>
+                                <th>
+                                    L
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    Total HT
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-color">
+                                        <span class="color-circle" style="background:#24734C"></span>
+                                        <span class="color-name" style="font-size: 10px">Green</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">3</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">4</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">1</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>13,50€</td>
+                                <td>108€</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-color">
+                                        <span class="color-circle" style="background:#FD2222"></span>
+                                        <span class="color-name"style="font-size: 10px">Red</span>
+                                    </div>
+                                </td>
+                                <td style="padding: 18px 0px">
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">2</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">4</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">0</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>13,50€</td>
+                                <td>81,00€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {{-- Add to cart --}}
+                <a href="#" class="cart-button">
+                    <p>Add to Cart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><img src="./images/cart.svg" alt="cart-svg">
+                </a>
+                {{-- Shipment information --}}
+                <div class="shipment-container">
+                    <div class="expected_shipment"><img src="./images/shipment.svg" alt="shipment">Shipment expected
+                        between 4 juillet - 9 juillet</div>
+                    <div class="secured_payment"><img src="./images/safepayment.svg" alt="payment">Paiement sécurisé
+                    </div>
+                    <div class="return_policy"><img src="./images/return.svg" alt="return">Retour accepté sous 7
+                        jours</div>
+                    <div class="client_support"><img src="./images/clientsupport.svg" alt="client-support">Service
+                        client personnalisé</div>
                 </div>
             </div>
-            <p class="socials">
-                <x-socials></x-socials>
-            </p>
-        </div>
-
-
-        {{-- Right part of the container with details --}}
-        <div class="details-container">
-            {{-- brand name and minimum price --}}
-            <div class="product-brand">
-                <h2>Luizacco & Co</h2>
-                <p>Minimum 100€</p>
-            </div>
-            {{-- details of the product and its reviews --}}
-            <div class="product-details">
-                <x-product_information :isFavorite=false rate="4"></x-product_information>
-            </div>
-            {{-- Starting price --}}
-            <div class="price-information">
-                <x-price_information>15,99€</x-price_information>
-            </div>
-            {{-- Buy options --}}
-            <div class="unit-pack-selector">
-                <p>Buy by&nbsp;&nbsp;:&nbsp;</p>
-                <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
-                <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
-            </div>
         </div>
     </div>
+    {{-- Separator --}}
+    {{-- maybe replace this with a div or change its style --}}
+    <hr>
+    {{-- User's reviews --}}
+    <div class="review-container">
+        <h2>Luizacco & Co &nbsp;Customer Reviews</h2>
+        {{-- make a grid for this part --}}
+        <div>
+
+        </div>
+    </div>
+
 </body>
 
 </html>
