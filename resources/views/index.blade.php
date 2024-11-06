@@ -62,7 +62,127 @@
                     <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
                     <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
                 </div>
+                {{-- Sizes table --}}
+                <div class="product-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    Color
+                                </th>
+                                <th>
+                                    S
+                                </th>
+                                <th>
+                                    M
+                                </th>
+                                <th>
+                                    L
+                                </th>
+                                <th>
+                                    Price
+                                </th>
+                                <th>
+                                    Total HT
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-color">
+                                        <span class="color-circle" style="background:#24734C"></span>
+                                        <span class="color-name" style="font-size: 10px">Green</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">3</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">4</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">1</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>13,50€</td>
+                                <td>108€</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-color">
+                                        <span class="color-circle" style="background:#FD2222"></span>
+                                        <span class="color-name"style="font-size: 10px">Red</span>
+                                    </div>
+                                </td>
+                                <td style="padding: 18px 0px">
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">2</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">4</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="quantity-container">
+                                        <span class="quantity-size">0</span>
+                                        <div style="display: flex; gap:7px">
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">-</span>
+                                            <span class="quantity-button"
+                                                style="background: #f5f5f5; height: 25px; width: 25px; font-size:16px">+</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>13,50€</td>
+                                <td>81,00€</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                {{-- Add to cart --}}
+                <div class="cart-button">
+                    <p>Add to Cart</p><span>logo</span>
+                </div>
             </div>
+
         </div>
     </div>
     {{-- Separator --}}
