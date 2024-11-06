@@ -29,27 +29,13 @@
         {{-- Left part of the product container with pictures and socials --}}
         <div class="picture-container">
             <div class="pictures">
-                <ul class="small-pictures-container">
-                    <li><x-picture size="small" pictureID="01.jpeg" alt="small-picture"></x-picture></li>
-                    <li><x-picture size="small" pictureID="02.jpeg" alt="small-picture"></x-picture></li>
-                    <li><x-picture size="small" pictureID="01.jpeg" alt="small-picture"></x-picture></li>
-                    <li><x-picture size="small" pictureID="02.jpeg" alt="small-picture"></x-picture></li>
-                    <li><x-picture size="small" pictureID="03.jpeg" alt="small-picture"></x-picture></li>
-                    <li><x-picture size="small" pictureID="04.jpeg" alt="small-picture"></x-picture></li>
-                </ul>
+                <x-product_small_pictures></x-product_small_pictures>
                 <div class="big-picture">
                     <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
                 </div>
             </div>
-            <p class="pictures-footer">
-                Share :
-                <span class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </span>
-                <span class="social-icon">
-                    <i class="fab fa-pinterest-p"></i>
-                </span>
-                <span style="cursor:pointer">...</span>
+            <p class="socials">
+                <x-socials></x-socials>
             </p>
         </div>
 
@@ -63,22 +49,12 @@
             </div>
             {{-- details of the product and its reviews --}}
             <div class="product-details">
-                <p>Combishort smockée à la taille en broderie anglaise avec nœud au dos&nbsp;
-                    <span><i class="far fa-heart"></i></span>
-                </p>
-                <div class="product-rating">
-                    <div>
-                        <x-rating_stars rate="4"></x-rating_stars>
-                    </div>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;Reviews (2)</p>
-                </div>
+                <x-product_information :isFavorite=false rate="4"></x-product_information>
             </div>
             {{-- Starting price --}}
             <div class="price-information">
-                <p class="">Starting at</p>
-                <x-price_tag>15,99€</x-price_tag>
+                <x-price_information>15,99€</x-price_information>
             </div>
-
             {{-- Buy options --}}
             <div class="unit-pack-selector">
                 <p>Buy by&nbsp;&nbsp;:&nbsp;</p>
