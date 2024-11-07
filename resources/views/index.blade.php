@@ -100,10 +100,13 @@
                 </div>
                 {{--  --}}
                 <div class="product-description-container">
-                    <p><img src="./images/planet.svg" alt="planet">Translated by google - <span>See in original
-                            language</span></p>
+                    <div class="translater-container">
+                        <img src="./images/planet.svg" alt="planet">
+                        <p>&nbsp;&nbsp;Translated by google&nbsp;&nbsp;-&nbsp;&nbsp;</p>
+                        <span class="translater-google">See in original language</span>
+                    </div>
                     <div class="description-block">
-                        <p>Description</p>
+                        <p style="font-weight: 500">Description</p>
                         <p>Outer : <span>Leather 95%, Polyamide 5%</span></p>
                         <p>Lining : <span>Polyester 100%</span></p>
                         <p>Sole : <span>Rubber 100%</span></p>
@@ -119,7 +122,7 @@
     <div class="review-container">
         <h2>Luizacco & Co &nbsp;Customer Reviews</h2>
         {{-- make a grid for this part --}}
-        <div>
+        <div style="height:500px">
 
         </div>
     </div>
