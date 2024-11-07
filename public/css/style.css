@@ -7,7 +7,7 @@
 
 body {
     height: 100vh;
-    min-width: 1400px;
+    min-width: 1200px;
     padding-top: 100px;
 }
 
@@ -163,17 +163,18 @@ body {
     gap: 3px;
 }
 
-.product-rating .rating-icon-gray {
+/*
+.rating-icon-gray {
     color: #cdcdcd;
     height: 18px;
     width: 16px;
 }
 
-.product-rating .rating-icon-colored {
+.rating-icon-colored {
     color: #fd5c22;
     height: 18px;
     width: 16px;
-}
+} */
 
 /* price information */
 
@@ -469,4 +470,54 @@ body {
 
 .description-block span {
     color: #525252;
+}
+
+/* separator */
+
+hr {
+    width: 1170px;
+    margin: auto;
+    border: 1px solid #e2e2e2;
+}
+
+/* customer reviews */
+
+.review-container {
+    /* to remove */
+    height: 500px;
+    margin-top: 41px;
+    display: grid;
+    grid-template-areas:
+        "brand-name brand-name"
+        "overall-ratings customer-review";
+}
+
+.review-brand {
+    grid-area: brand-name;
+    text-align: center;
+}
+
+.overall-ratings-container {
+    grid-area: overall-ratings;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #767676;
+}
+
+.overall-ratings-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 12px;
+    padding-bottom: 5px;
+}
+
+.progress-bar {
+    height: 12px;
+    width: 159px;
+}
+
+.customer-review-container {
+    grid-area: customer-review;
 }

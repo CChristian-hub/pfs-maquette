@@ -1,16 +1,20 @@
-@props(['rate' => 0])
+@props(['rate' => 0, 'width', 'height', 'pr' => 0])
 
 @for ($i = 0; $i < 5; $i++, $rate--)
     @if ($rate > 0)
-        <i class="fas fa-star rating-icon-colored"></i>
+        <img src="./images/star-color.svg" alt="starsvg"
+            style="width: {{ $width }}px; height {{ $height }}px;
+            @if ($pr != 0) margin-right: {{ $pr }}px @endif
+            ">
     @else
-        <i class="fas fa-star rating-icon-gray"></i>
+        <img src="./images/star-nocolor.svg" alt="starsvg"
+            style="width: {{ $width }}px; height {{ $height }}px;
+            @if ($pr != 0) margin-right: {{ $pr }}px @endif
+            ">
     @endif
 @endfor
 
-{{--
+{{-- fontawesome and material stars
 <i class="material-icons-sharp rating-icon-colored">star</i>
-<i class="material-icons-sharp rating-icon-colored">star</i>
-<i class="material-icons-sharp rating-icon-colored">star</i>
-<i class="material-icons-sharp rating-icon-colored">star</i>
-<i class="material-icons-sharp rating-icon-gray">star</i> --}}
+<i class="fas fa-star" style="width: {{ $width }}px; height {{ $height }}px; color: #cdcdcd;"></i>
+--}}

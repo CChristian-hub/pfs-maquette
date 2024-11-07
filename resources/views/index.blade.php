@@ -98,7 +98,7 @@
                     <x-shipment_policy class="client_support" pathsvg="clientsupport" alt="support">Service client
                         personnalisé</x-shipment_policy>
                 </div>
-                {{--  --}}
+                {{-- Description container --}}
                 <div class="product-description-container">
                     <div class="translater-container">
                         <img src="./images/planet.svg" alt="planet">
@@ -116,15 +116,39 @@
         </div>
     </div>
     {{-- Separator --}}
-    {{-- maybe replace this with a div or change its style --}}
     <hr>
     {{-- User's reviews --}}
     <div class="review-container">
-        <h2>Luizacco & Co &nbsp;Customer Reviews</h2>
-        {{-- make a grid for this part --}}
-        <div style="height:500px">
-
+        <h2 class="review-brand">Luizacco & Co &nbsp;Customer Reviews</h2>
+        {{-- left part of the reviews --}}
+        <div class="overall-ratings-container">
+            <div class="overall-ratings-top">
+                <span style="font-size: 48px; font-weight: 600; color: #111111; letter-spacing: 3px;">4,5&nbsp;</span>
+                <span>out of 5 stars</span>
+                <div style="padding-top: 15px">
+                    <x-rating_stars rate="3" pr="9" width="31" height="31"></x-rating_stars>
+                </div>
+                <p
+                    style="font-family: 'Montserrat', sans-serif; font-weight: 600; color: #3C3C3B; padding-top: 10px; padding-left:2px; margin-bottom: 35px">
+                    2 Ratings</p>
+            </div>
+            <x-review_rating_graph percent="74">5</x-review_rating_graph>
+            <x-review_rating_graph percent="32">4</x-review_rating_graph>
+            <x-review_rating_graph percent="16">3</x-review_rating_graph>
+            <x-review_rating_graph percent="2">2</x-review_rating_graph>
+            <x-review_rating_graph percent="0">1</x-review_rating_graph>
         </div>
+        {{-- right part of the reviews --}}
+        <div class="customer-review-container">RIGHT
+            <div>
+                <p>See more reviews</p>
+                <span></span>
+            </div>
+            <div>
+                customer review x1
+            </div>
+        </div>
+
     </div>
 
 </body>

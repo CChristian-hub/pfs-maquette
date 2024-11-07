@@ -9,7 +9,7 @@
 </p>
 <div class="product-rating">
     <div>
-        <x-rating_stars rate='{{ $rate }}'></x-rating_stars>
+        <x-rating_stars rate='{{ $rate }}' width="16" height="18"></x-rating_stars>
     </div>
     <p>&nbsp;&nbsp;&nbsp;&nbsp;Reviews (2)</p>
 </div>
