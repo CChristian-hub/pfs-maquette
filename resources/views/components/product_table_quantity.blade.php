@@ -46,13 +46,11 @@
             $result =
                 ($attributes['quantityS'] + $attributes['quantityM'] + $attributes['quantityL']) *
                 str_replace(',', '.', $attributes['price']);
-            if ($attributes['color'] == 'Green') {
-                echo $result;
+            if ($result > 100) {
+                echo $result . '€';
             } else {
-                // Sonely to match model
-                echo $result . ',00';
+                echo number_format($result, 2, ',', '') . '€';
             }
         @endphp
-        €
     </td>
 </tr>

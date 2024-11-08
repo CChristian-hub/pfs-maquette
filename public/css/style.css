@@ -399,9 +399,10 @@ body {
 .expected_shipment {
     grid-area: shipment;
     border: 0.5px solid #e0e0e0;
-    display: flex;
+    display: inline-flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
+    padding-left: 28px;
     align-items: center;
     height: 59px;
 }
