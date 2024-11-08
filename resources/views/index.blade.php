@@ -16,23 +16,24 @@
 </head>
 
 <body>
-    {{-- breadcrumb nav, to move it should be in the lower container and not isolated --}}
     <div class="main">
-        <div class="breadcrumb">
-            <x-breadcrumb>Home</x-breadcrumb>
-            &#8250;
-            <x-breadcrumb>Women</x-breadcrumb>
-            &#8250;
-            <x-breadcrumb>Dresse</x-breadcrumb>
-        </div>
-        {{-- product container --}}
         <div class="product-container">
             {{-- Left part of the product container with pictures and socials --}}
             <div class="picture-container">
-                <div class="pictures">
-                    <x-product_small_pictures></x-product_small_pictures>
-                    <div class="big-picture">
-                        <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
+                <div class="breadcrumb-picture-container">
+                    {{-- breadcrumb on top of pictures container --}}
+                    <div class="breadcrumb">
+                        <x-breadcrumb>Home</x-breadcrumb>
+                        &#8250;
+                        <x-breadcrumb>Women</x-breadcrumb>
+                        &#8250;
+                        <x-breadcrumb>Dresse</x-breadcrumb>
+                    </div>
+                    <div class="pictures">
+                        <x-product_small_pictures></x-product_small_pictures>
+                        <div class="big-picture">
+                            <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
+                        </div>
                     </div>
                 </div>
                 <p class="socials">
@@ -142,8 +143,8 @@
         <div class="customer-review-container">
             <a href="#">See more reviews&nbsp;&nbsp;<img src="./images/arrow.svg" alt=""></a>
 
-
-            <div style="border: 1px solid #E2E2E2; padding: 21px 101px 24px 67px; margin-bottom: 13px">
+            {{-- user review sample 01 --}}
+            {{-- <div style="border: 1px solid #E2E2E2; padding: 21px 101px 24px 67px; margin-bottom: 13px">
                 <div class="review-rate-date-container">
                     <div class="review-rate-date-container-left">
                         <x-rating_stars rate="3" pr="2.6" width="20" height="20"></x-rating_stars>
@@ -163,14 +164,20 @@
                     <p>&nbsp;&nbsp;</p>
                     <p>from France</p>
                 </div>
-            </div>
+            </div> --}}
 
+            <x-user_review date="07 Jul 2019" user="Sophie Casey" location="France" title="Quality products"
+                comment="Luizzaco's products are very high quality. I am very satisfied. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet."
+                like="2" rate="3"></x-user_review>
 
-            <div style="border: 1px solid #E2E2E2; padding: 21px 101px 24px 67px">
+            <x-user_review date="05 Jul 2019" user="Sophie Casey" location="France" title="Very satisfied"
+                comment="Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? cum o potest, ut non dicas, quid non"
+                like="6" rate="5"></x-user_review>
+            {{-- user review sample 02 --}}
+            {{-- <div style="border: 1px solid #E2E2E2; padding: 21px 101px 24px 67px">
                 <div class="review-rate-date-container">
                     <div class="review-rate-date-container-left">
-                        <x-rating_stars rate="5" pr="2.6" width="20"
-                            height="20"></x-rating_stars>
+                        <x-rating_stars rate="5" pr="2.6" width="20" height="20"></x-rating_stars>
                         <p class="review-date">05 Jul 2019</p>
                     </div>
                     <div class="review-rate-date-container-right">
@@ -187,7 +194,9 @@
                     <p>&nbsp;&nbsp;</p>
                     <p>from France</p>
                 </div>
-            </div>
+            </div> --}}
+
+
         </div>
     </div>
     <div style="margin-top:57px"></div>
