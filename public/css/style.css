@@ -480,11 +480,9 @@ hr {
     border: 1px solid #e2e2e2;
 }
 
-/* customer reviews */
+/* rating reviews */
 
 .review-container {
-    /* to remove */
-    height: 500px;
     margin-top: 41px;
     display: grid;
     grid-template-areas:
@@ -495,9 +493,17 @@ hr {
 .review-brand {
     grid-area: brand-name;
     text-align: center;
+    margin-bottom: 26px;
+    font-family: Roboto;
+    font-size: 32px;
+    font-weight: 500;
+    color: #111111;
 }
 
 .overall-ratings-container {
+    margin: auto;
+    margin-right: 0;
+    width: 233px;
     grid-area: overall-ratings;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
@@ -518,6 +524,75 @@ hr {
     width: 159px;
 }
 
+/* customer reviews */
+
 .customer-review-container {
     grid-area: customer-review;
+    display: flex;
+    flex-direction: column;
+    width: 871px;
+    margin-left: 69px;
+}
+
+.customer-review-container a {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #ff7b28;
+    text-align: end;
+    padding-bottom: 19px;
+}
+
+.review-rate-date-container,
+.review-rate-date-container-left,
+.review-rate-date-container-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.review-rate-date-container {
+    justify-content: space-between;
+}
+
+.review-rate-date-container-right {
+    align-items: center;
+}
+
+.review-date {
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
+    padding-top: 6px;
+    padding-left: 19px;
+}
+
+.user-review-title {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #111111;
+    padding-top: 20px;
+}
+
+.user-review-comment {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #525252;
+    padding-top: 13px;
+}
+
+.user-review-name-location {
+    display: flex;
+    flex-direction: row;
+    padding-top: 19px;
+}
+
+.user-review-name-location p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #767676;
 }
