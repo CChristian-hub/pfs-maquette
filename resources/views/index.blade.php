@@ -125,7 +125,7 @@
             <div class="overall-ratings-top">
                 <span style="font-size: 48px; font-weight: 600; color: #111111; letter-spacing: 3px;">4,5&nbsp;</span>
                 <span>out of 5 stars</span>
-                <div style="padding-top: 15px">
+                <div style="padding-top: 5px">
                     <x-rating_stars rate="3" pr="9" width="31" height="31"></x-rating_stars>
                 </div>
                 <p
@@ -139,18 +139,60 @@
             <x-review_rating_graph percent="0">1</x-review_rating_graph>
         </div>
         {{-- right part of the reviews --}}
-        <div class="customer-review-container">RIGHT
-            <div>
-                <p>See more reviews</p>
-                <span></span>
+        <div class="customer-review-container">
+            <a href="#">See more reviews&nbsp;&nbsp;<img src="./images/arrow.svg" alt=""></a>
+
+
+            <div style="border: 1px solid #E2E2E2; padding: 21px 101px 24px 67px; margin-bottom: 13px">
+                <div class="review-rate-date-container">
+                    <div class="review-rate-date-container-left">
+                        <x-rating_stars rate="3" pr="2.6" width="20" height="20"></x-rating_stars>
+                        <p class="review-date">07 Jul 2019</p>
+                    </div>
+                    <div class="review-rate-date-container-right">
+                        <p>2&nbsp;</p>
+                        <img src="./images/thumb.svg" alt="thumbsvg" style="margin-bottom: 1px">
+                    </div>
+                </div>
+                <p class="user-review-title">Quality products</p>
+                <p class="user-review-comment">Luizzaco's products are very high quality. I am very satisfied. Fieri,
+                    inquam, Triari, nullo pacto
+                    potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet.</p>
+                <div class="user-review-name-location">
+                    <p>Sophie Casey</p>
+                    <p>&nbsp;&nbsp;</p>
+                    <p>from France</p>
+                </div>
             </div>
-            <div>
-                customer review x1
+
+
+            <div style="border: 1px solid #E2E2E2; padding: 21px 101px 24px 67px">
+                <div class="review-rate-date-container">
+                    <div class="review-rate-date-container-left">
+                        <x-rating_stars rate="5" pr="2.6" width="20"
+                            height="20"></x-rating_stars>
+                        <p class="review-date">05 Jul 2019</p>
+                    </div>
+                    <div class="review-rate-date-container-right">
+                        <p>6&nbsp;</p>
+                        <img src="./images/thumb.svg" alt="thumbsvg" style="margin-bottom: 1px">
+                    </div>
+                </div>
+                <p class="user-review-title">Very satisfied</p>
+                <p class="user-review-comment">Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes
+                    eius, a quo dissentias. quid enim me prohiberet Epicureum esse, si probarem, quae ille diceret? cum
+                    o potest, ut non dicas, quid non</p>
+                <div class="user-review-name-location">
+                    <p>Sophie Casey</p>
+                    <p>&nbsp;&nbsp;</p>
+                    <p>from France</p>
+                </div>
             </div>
         </div>
-
     </div>
-
+    <div style="margin-top:57px"></div>
+    <hr>
+    <div style="padding-bottom:500px"></div>
 </body>
 
 </html>
