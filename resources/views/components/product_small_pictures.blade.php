@@ -6,7 +6,7 @@
 <ul class="small-pictures-container">
     @if (count($array))
         @for ($i = 0; $i < count($array); $i++)
-            <li><x-picture size="small" pictureID="{{ $array[$i] }}" alt="small-picture"></x-picture></li>
+            <li><x-picture size="small" picturePath="{{ $array[$i] }}" alt="small-picture"></x-picture></li>
         @endfor
     @endif
 </ul>
