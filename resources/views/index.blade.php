@@ -75,10 +75,10 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <x-product-table-quantity color="Green" hexColor="#24734C" quantityS="3" quantityM="4"
-                                quantityL="1" price="13,50"></x-product-table-quantity>
-                            <x-product-table-quantity color="Red" hexColor="#FD2222" quantityS="2" quantityM="4"
-                                quantityL="0" price="13,5"></x-product-table-quantity>
+                            <x-product_table_quantity color="Green" hexColor="#24734C" quantityS="3" quantityM="4"
+                                quantityL="1" price="13,50"></x-product_table_quantity>
+                            <x-product_table_quantity color="Red" hexColor="#FD2222" quantityS="2" quantityM="4"
+                                quantityL="0" price="13,50"></x-product_table_quantity>
                         </tbody>
                     </table>
                 </div>

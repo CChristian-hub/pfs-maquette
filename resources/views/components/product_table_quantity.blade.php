@@ -40,8 +40,8 @@
             </div>
         </div>
     </td>
-    <td>{{ $attributes['price'] }}</td>
-    <td>
+    <td>{{ $attributes['price'] }}€</td>
+    <td class="total-price-color">
         @php
             $result =
                 ($attributes['quantityS'] + $attributes['quantityM'] + $attributes['quantityL']) *
@@ -53,5 +53,6 @@
                 echo $result . ',00';
             }
         @endphp
-        €</td>
+        €
+    </td>
 </tr>
