@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/befe272f62.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="./js/script.js"></script>
     <title>Product Page</title>
 </head>
 
@@ -31,9 +33,7 @@
                     </div>
                     <div class="pictures">
                         <x-product_small_pictures></x-product_small_pictures>
-                        <div class="big-picture">
-                            <x-picture size="big" pictureID="03.jpeg" alt="big-picture"></x-picture>
-                        </div>
+                        <x-picture size="big" picturePath="03.jpeg" alt="big-picture"></x-picture>
                     </div>
                 </div>
                 <p class="socials">

@@ -508,14 +508,15 @@ hr {
 }
 
 .overall-ratings-container {
-    margin: auto;
-    margin-right: 0;
+    margin-left: auto;
+    height: auto;
     width: 233px;
     grid-area: overall-ratings;
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-size: 14px;
     color: #767676;
+    padding-top: 15px;
 }
 
 .overall-ratings-bottom {
