@@ -8,8 +8,6 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:wght@300;400;500&display=swap"
         rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/befe272f62.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -23,7 +21,6 @@
             {{-- Left part of the product container with pictures and socials --}}
             <div class="picture-container">
                 <div class="breadcrumb-picture-container">
-                    {{-- breadcrumb on top of pictures container --}}
                     <div class="breadcrumb">
                         <x-breadcrumb>Home</x-breadcrumb>
                         &#8250;
@@ -33,7 +30,13 @@
                     </div>
                     <div class="pictures">
                         <x-product_small_pictures></x-product_small_pictures>
-                        <x-picture size="big" picturePath="03.jpeg" alt="big-picture"></x-picture>
+                        <div id="imageZoom"
+                            style="--url: url(../images/picture-preview-03.jpeg);
+                                --zoom-x: 0%;
+                                --zoom-y: 0%;
+                                --display:none">
+                            <x-picture size="big" picturePath="03.jpeg" alt="big-picture"></x-picture>
+                        </div>
                     </div>
                 </div>
                 <p class="socials">
@@ -42,26 +45,21 @@
             </div>
             {{-- Right part of the container with details --}}
             <div class="details-container">
-                {{-- brand name and minimum price --}}
                 <div class="product-brand">
                     <h2>Luizacco & Co</h2>
                     <p>Minimum 100€</p>
                 </div>
-                {{-- details of the product and its reviews --}}
                 <div class="product-details">
                     <x-product_information :isFavorite=false rate="4"></x-product_information>
                 </div>
-                {{-- Starting price --}}
                 <div class="price-information">
                     <x-price_information>15,99€</x-price_information>
                 </div>
-                {{-- Buy options --}}
                 <div class="unit-pack-selector">
                     <p>Buy by <span style="padding-right: 3px"></span>:</p>
                     <x-checkbox pl="16">Pack</x-checkbox>
                     <x-checkbox pl="28">Unit</x-checkbox>
                 </div>
-                {{-- Sizes table --}}
                 <div class="product-table">
                     <table>
                         <thead>
@@ -82,11 +80,9 @@
                         </tbody>
                     </table>
                 </div>
-                {{-- Add to cart --}}
                 <a href="#" class="cart-button">
                     <p style="padding-right: 19px">Add to Cart</p><img src="./images/cart.svg" alt="cart-svg">
                 </a>
-                {{-- Shipment information --}}
                 <div class="shipment-container">
                     <div class="expected_shipment">
                         <img src="./images/shipment.svg" alt="shipment">
@@ -99,7 +95,6 @@
                     <x-shipment_policy class="client_support" pathsvg="clientsupport" alt="support">Service client
                         personnalisé</x-shipment_policy>
                 </div>
-                {{-- Description container --}}
                 <div class="product-description-container">
                     <div class="translater-container">
                         <img src="./images/planet.svg" alt="planet">
@@ -117,9 +112,7 @@
             </div>
         </div>
     </div>
-    {{-- Separator --}}
     <hr>
-    {{-- User's reviews --}}
     <div class="review-container">
         <h2 class="review-brand">Luizacco & Co <span style="padding-right:7px"></span> Customer Reviews</h2>
         {{-- left part of the reviews --}}

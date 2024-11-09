@@ -11,7 +11,6 @@ body {
     padding-top: 100px;
 }
 
-/* breadcrumb */
 .breadcrumb {
     font-weight: 400;
     font-size: 13px;
@@ -41,7 +40,6 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: end;
-    /* value to edit */
     margin-right: 30px;
 }
 
@@ -75,7 +73,6 @@ body {
     max-height: 693px;
 }
 
-/* socials */
 .socials {
     font-family: "Montserrat", serif;
     font-weight: 600;
@@ -112,7 +109,6 @@ body {
     margin-left: 30px;
 }
 
-/* brand */
 .product-brand {
     display: flex;
     flex-direction: column;
@@ -132,11 +128,10 @@ body {
     color: #3c3c3b;
 }
 
-/* details */
-
 .product-details {
     padding-top: 19px;
 }
+
 .product-details p {
     width: 450px;
     font-weight: 300;
@@ -153,7 +148,6 @@ body {
     color: #fd5c22;
 }
 
-/* ratings */
 .product-rating {
     display: flex;
     flex-direction: row;
@@ -174,21 +168,6 @@ body {
     align-items: center;
     gap: 3px;
 }
-
-/*
-.rating-icon-gray {
-    color: #cdcdcd;
-    height: 18px;
-    width: 16px;
-}
-
-.rating-icon-colored {
-    color: #fd5c22;
-    height: 18px;
-    width: 16px;
-} */
-
-/* price information */
 
 .price-information {
     margin-top: 12px;
@@ -213,8 +192,6 @@ body {
     line-height: 29.26px;
     color: #fd5c22;
 }
-
-/* unit selector */
 
 .unit-pack-selector {
     flex-direction: row;
@@ -269,15 +246,13 @@ body {
     align-items: center;
 }
 
-/* table */
-
 .product-table {
     padding-top: 17px;
     width: 500px;
 }
 .product-table table {
     width: 500px;
-    table-layout: auto; /* This will make the table adjust based on content */
+    table-layout: auto;
 }
 
 .product-table td {
@@ -361,8 +336,6 @@ body {
     cursor: pointer;
 }
 
-/* Cart */
-
 .cart-button {
     font-family: Roboto;
     font-size: 16px;
@@ -380,8 +353,6 @@ body {
     margin-top: 28px;
     text-decoration: none;
 }
-
-/* Shipment */
 
 .shipment-container {
     margin-top: 32px;
@@ -437,7 +408,6 @@ body {
     height: 120px;
 }
 
-/* product description */
 .product-description-container {
     font-family: "Roboto", sans-serif;
     font-size: 12px;
@@ -487,15 +457,11 @@ body {
     color: #525252;
 }
 
-/* separator */
-
 hr {
     width: 1170px;
     margin: auto;
     border: 0.5px solid #e2e2e2;
 }
-
-/* rating reviews */
 
 .review-container {
     margin-top: 41px;
@@ -539,8 +505,6 @@ hr {
     height: 12px;
     width: 159px;
 }
-
-/* customer reviews */
 
 .customer-review-container {
     grid-area: customer-review;
@@ -611,4 +575,23 @@ hr {
     font-size: 14px;
     font-weight: 400;
     color: #767676;
+}
+
+#imageZoom {
+    position: relative;
+}
+
+#imageZoom::after {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: var(--display);
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-image: var(--url);
+    background-size: 200%;
+    background-position: var(--zoom-x) var(--zoom-y);
+    pointer-events: none;
 }
