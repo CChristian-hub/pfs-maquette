@@ -6,7 +6,7 @@ $(document).ready(function () {
         }
     )
 
-    // $(".quantity-container")
+    // dynamic buttons
     $(".quantity-button").click(
         function () {
             let totalPrice = $(this).parent().parent().parent().siblings('.total-price-color').text()

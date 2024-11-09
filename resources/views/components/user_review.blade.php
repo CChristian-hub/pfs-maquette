@@ -7,15 +7,14 @@
             <p class="review-date">{{ $date }}</p>
         </div>
         <div class="review-rate-date-container-right">
-            <p>{{ $like }}&nbsp;</p>
+            <p style="padding-right: 6px">{{ $like }}</p>
             <img src="./images/thumb.svg" alt="thumbsvg" style="margin-bottom: 1px">
         </div>
     </div>
     <p class="user-review-title">{{ $title }}</p>
     <p class="user-review-comment">{{ $comment }}</p>
     <div class="user-review-name-location">
-        <p>{{ $user }}</p>
-        <p>&nbsp;&nbsp;</p>
+        <p style="padding-right: 9px;">{{ $user }}</p>
         <p>from {{ $location }}</p>
     </div>
 </div>
