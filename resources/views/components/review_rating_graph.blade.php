@@ -2,6 +2,8 @@
 
 @php
     $width = 0;
+
+    // Progress bar - 159 to match model width
     if ($percent > 0) {
         $width = ($percent / 100) * 159;
     }

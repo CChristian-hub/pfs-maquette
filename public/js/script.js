@@ -1,40 +1,38 @@
 $(document).ready(function () {
-    // picture changes
     $('.small-picture').click(
         function () {
-            $('#bigPicture')[0].src = this.attributes.src.value;
+            $('#bigPicture').attr('src', this.attributes.src.value)
+            $('#imageZoom').css('--url', "url(" + '..' + (this.attributes.src.value) + ')')
         }
     )
 
-    // dynamic buttons
+    // many conditions to fit the following rules deducted from model
+    // above 100 - no comas if no decimals
+    // under 100, and with decimals - 2 decilmals display
     $(".quantity-button").click(
         function () {
             let totalPrice = $(this).parent().parent().parent().siblings('.total-price-color').text()
-            console.log(totalPrice.trim())
             totalPrice = totalPrice.replace(',', '.')
             totalPrice = Number(totalPrice.trim().slice(0, -1).trim())
 
             if ($(this).text() == '-') {
-                let temp = Number($(this).parent().siblings('.quantity-size').text());
-                if (temp > 0) {
-                    temp -= 1;
+                let quantitySize = Number($(this).parent().siblings('.quantity-size').text());
+                if (quantitySize > 0) {
+                    quantitySize -= 1;
                     totalPrice -= 13.50;
-                    $(this).parent().siblings('.quantity-size').text(temp);
+                    $(this).parent().siblings('.quantity-size').text(quantitySize);
                 }
             } else {
-                let temp = Number($(this).parent().siblings('.quantity-size').text());
-                temp += 1;
+                let quantitySize = Number($(this).parent().siblings('.quantity-size').text());
+                quantitySize += 1;
                 totalPrice += 13.50;
-                $(this).parent().siblings('.quantity-size').text(temp);
+                $(this).parent().siblings('.quantity-size').text(quantitySize);
             }
 
             if (totalPrice > 100) {
                 totalPrice = totalPrice + '€';
                 if (totalPrice.indexOf('.') >= 0) {
-                    console.log(typeof (totalPrice))
-                    console.log(totalPrice)
                     let formattedTotal = totalPrice.replace('.5', ',50')
-                    console.log("format", formattedTotal)
                     $(this).parent().parent().parent().siblings('.total-price-color').text((formattedTotal))
                 } else {
                     $(this).parent().parent().parent().siblings('.total-price-color').text((totalPrice))
@@ -42,14 +40,14 @@ $(document).ready(function () {
             }
             if (totalPrice < 100) {
                 if (totalPrice != 0) {
+                    let formattedTotal;
                     totalPrice = totalPrice + '€';
                     if (totalPrice.indexOf('.') >= 0) {
-                        let formattedTotal = totalPrice.replace('.5', ',50')
-                        $(this).parent().parent().parent().siblings('.total-price-color').text((formattedTotal))
+                        formattedTotal = totalPrice.replace('.5', ',50')
                     } else {
-                        let formattedTotal = totalPrice.replace('€', ',00€')
-                        $(this).parent().parent().parent().siblings('.total-price-color').text((formattedTotal))
+                        formattedTotal = totalPrice.replace('€', ',00€')
                     }
+                    $(this).parent().parent().parent().siblings('.total-price-color').text((formattedTotal))
                 } else {
                     totalPrice = totalPrice + '€';
                     $(this).parent().parent().parent().siblings('.total-price-color').text((totalPrice))
@@ -57,4 +55,17 @@ $(document).ready(function () {
             }
         }
     )
+
+    $('#imageZoom').on('mousemove', function (event) {
+        $(this).css('--display', 'block');
+        let pointer = {
+            x: (event.offsetX * 100) / $(this).width(),
+            y: (event.offsetY * 100) / $(this).height()
+        }
+        $(this).css('--zoom-x', pointer.x + '%')
+        $(this).css('--zoom-y', pointer.y + '%')
+    })
+    $('#imageZoom').on('mouseout', function () {
+        $(this).css('--display', 'none')
+    })
 });
