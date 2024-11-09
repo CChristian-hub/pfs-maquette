@@ -57,9 +57,9 @@
                 </div>
                 {{-- Buy options --}}
                 <div class="unit-pack-selector">
-                    <p>Buy by&nbsp;&nbsp;&nbsp;</p>
-                    <x-checkbox pl="16">&nbsp;Pack</x-checkbox>
-                    <x-checkbox pl="28">&nbsp;Unit</x-checkbox>
+                    <p>Buy by <span style="padding-right: 3px"></span>:</p>
+                    <x-checkbox pl="16">Pack</x-checkbox>
+                    <x-checkbox pl="28">Unit</x-checkbox>
                 </div>
                 {{-- Sizes table --}}
                 <div class="product-table">
@@ -84,7 +84,7 @@
                 </div>
                 {{-- Add to cart --}}
                 <a href="#" class="cart-button">
-                    <p>Add to Cart&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p><img src="./images/cart.svg" alt="cart-svg">
+                    <p style="padding-right: 19px">Add to Cart</p><img src="./images/cart.svg" alt="cart-svg">
                 </a>
                 {{-- Shipment information --}}
                 <div class="shipment-container">
@@ -103,7 +103,8 @@
                 <div class="product-description-container">
                     <div class="translater-container">
                         <img src="./images/planet.svg" alt="planet">
-                        <p>&nbsp;&nbsp;Translated by google&nbsp;&nbsp;-&nbsp;&nbsp;</p>
+                        <p style="padding-left:7px">Translated by google</p>
+                        <p style="padding: 0px 7px">-</p>
                         <span class="translater-google">See in original language</span>
                     </div>
                     <div class="description-block">
@@ -120,11 +121,12 @@
     <hr>
     {{-- User's reviews --}}
     <div class="review-container">
-        <h2 class="review-brand">Luizacco & Co &nbsp;Customer Reviews</h2>
+        <h2 class="review-brand">Luizacco & Co <span style="padding-right:7px"></span> Customer Reviews</h2>
         {{-- left part of the reviews --}}
         <div class="overall-ratings-container">
             <div class="overall-ratings-top">
-                <span style="font-size: 48px; font-weight: 600; color: #111111; letter-spacing: 3px;">4,5&nbsp;</span>
+                <span
+                    style="font-size: 48px; font-weight: 600; color: #111111; letter-spacing: 3px; padding-right: 8px">4,5</span>
                 <span>out of 5 stars</span>
                 <div style="padding-top: 5px">
                     <x-rating_stars rate="3" pr="9" width="31" height="31"></x-rating_stars>
@@ -141,7 +143,7 @@
         </div>
         {{-- right part of the reviews --}}
         <div class="customer-review-container">
-            <a href="#">See more reviews&nbsp;&nbsp;<img src="./images/arrow.svg" alt=""></a>
+            <a href="#">See more reviews<img style="padding-left:6px"src="./images/arrow.svg" alt=""></a>
             <x-user_review date="07 Jul 2019" user="Sophie Casey" location="France" title="Quality products"
                 comment="Luizzaco's products are very high quality. I am very satisfied. Fieri, inquam, Triari, nullo pacto potest, ut non dicas, quid non probes eius, a quo dissentias. quid enim me prohiberet."
                 like="2" rate="3"></x-user_review>

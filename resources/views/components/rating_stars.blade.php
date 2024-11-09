@@ -13,8 +13,3 @@
             ">
     @endif
 @endfor
-
-{{-- fontawesome and material stars
-<i class="material-icons-sharp rating-icon-colored">star</i>
-<i class="fas fa-star" style="width: {{ $width }}px; height {{ $height }}px; color: #cdcdcd;"></i>
---}}

@@ -8,8 +8,6 @@
     @endif
 </p>
 <div class="product-rating">
-    <div>
-        <x-rating_stars rate='{{ $rate }}' width="16" height="18"></x-rating_stars>
-    </div>
-    <p>&nbsp;&nbsp;&nbsp;&nbsp;Reviews (2)</p>
+    <x-rating_stars rate='{{ $rate }}' pr="2" width="16" height="17"></x-rating_stars>
+    <p style="padding-top: 4px; padding-left: 11px">Reviews (2)</p>
 </div>
